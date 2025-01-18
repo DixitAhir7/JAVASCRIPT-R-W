@@ -14,3 +14,14 @@ console.log(check);
 
 check=str !==num
 console.log(check);
+
+// incriment operator
+// post incriment operator
+let inc=10;
+console.log(inc++);
+console.log(inc);
+
+// pre incriment operator
+let inc1=10;
+console.log(++inc1);
+console.log(inc1);
