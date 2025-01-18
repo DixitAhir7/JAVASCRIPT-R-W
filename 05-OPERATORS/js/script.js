@@ -16,3 +16,7 @@ console.log(num_comp);
 
 num_comp_2=num != num_2
 console.log(num_comp_2);
+
+// exponation operator
+
+let a
