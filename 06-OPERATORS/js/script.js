@@ -12,7 +12,7 @@ console.log(check);
 
 //  it is checking the value and data_types and also the data_type
 
-check=str !==num
+let check=str !==num
 console.log(check);
 
 // incriment operator
@@ -28,14 +28,16 @@ console.log(inc1);
 
 //string concatenation
 
-Name="dixit";
-Name_again="Ahir"
+let Name="dixit";
+let Name_again="Ahir"
 console.log(Name*Name_again);
 
-
-num_for_str=5;
-num_for_str_two="5";
+let num_for_str=5;
+let num_for_str_two="5";
 console.log(num_for_str + num_for_str_two);
 console.log(num_for_str+"5"+num_for_str_two);
 console.log(num_for_str-num_for_str_two);
 
+let one=1;
+let two=2;
+one+=two
