@@ -25,3 +25,17 @@ console.log(inc);
 let inc1=10;
 console.log(++inc1);
 console.log(inc1);
+
+//string concatenation
+
+Name="dixit";
+Name_again="Ahir"
+console.log(Name*Name_again);
+
+
+num_for_str=5;
+num_for_str_two="5";
+console.log(num_for_str + num_for_str_two);
+console.log(num_for_str+"5"+num_for_str_two);
+console.log(num_for_str-num_for_str_two);
+
