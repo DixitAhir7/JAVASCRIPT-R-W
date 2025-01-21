@@ -14,3 +14,8 @@ console.log(str_bool);
 let str_zero="0";
 let str_con_zero=Boolean(str_zero);
 console.log(str_con_zero);
+
+let Name="Dixit";
+let Name_two="P";
+let Name_three="Ahir";
+console.log(Name + " "+ Name_two+"."+Name_three);
