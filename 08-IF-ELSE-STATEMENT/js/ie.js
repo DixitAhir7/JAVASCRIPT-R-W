@@ -6,3 +6,8 @@ if(num>0){
 else{
     console.log("enter a positive num only");
 }
+
+
+let Name="dixit";
+Name++
+console.log(Name);
