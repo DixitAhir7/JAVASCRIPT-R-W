@@ -4,3 +4,7 @@
     let x = 2;
     console.log(x);
 }
+
+
+// this is a global scooe u can acess it anywhere
+let a = 5;
