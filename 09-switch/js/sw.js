@@ -97,8 +97,11 @@ switch(lang){
 }
     telecoe_service();
 
-// // calculator
+//calculator
 
-// let A=Number(prompt("enter any number:"));
-// let B=Number(prompt("enter second value:"));
-// let c =A+B
+let a ="*"
+let b=Number(prompt("enter a number:"));
+
+switch(a){
+    case "*": a*b;
+}
