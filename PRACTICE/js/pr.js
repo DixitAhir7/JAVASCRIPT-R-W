@@ -1,36 +1,30 @@
-function test(){
-    let x=3;
+function test(x){
     console.log(x %3);
     console.log(x**3);
 }
 
-test()
+test(3)
 
 //in post increment or decrease you'll have to print it 
 //in pre you won't have to print it
 
-console.log(x--);
-console.log(x);
-console.log(--x);
-console.log("2"==2);
-console.log(2=="4");
+// console.log(x--);
+// console.log(x);
+// console.log(--x);
+// console.log("2"==2);
+// console.log(2=="4");
 
 //swapping two variables
-function swap(){
-    let a = 10;
-    let b = 20;
-    
+function swap(a,b){
     [a,b] = [b,a];
     console.log(a);
     console.log(b);
 }
 
-swap()
+swap(10,20)
 
 // finding min number
-function min_number(){
-    num=Number(prompt("enter a num"))
-    num_2=Number(prompt("enter a second num"))
+function min_number(num,num_2){
     
     if (num,num_2==0){
         console.log("please enter a number");
@@ -43,12 +37,11 @@ function min_number(){
     }
 }
 
-min_number()
+min_number(prompt("enter first number:",prompt("enter second number:")))
 
 
 //neutral number
-function neutral_number(){
-    zero=Number(prompt("enter a number:"))
+function neutral_number(zero){
 
     if (zero==0){
         console.log("it is zero");
@@ -59,13 +52,11 @@ function neutral_number(){
     }
 }
 
-neutral_number()
+neutral_number(Number(prompt("enter a number:")))
 
 //checking the num is divisible by this number or not
 
-function divisible(){
-    let lg = Number(prompt("Enter a number: "));
-    let output = false;
+function divisible(lg,output){
     
     if (lg % 2 === 0) {
         console.log(lg + " is divisible by 2");
@@ -87,7 +78,7 @@ function divisible(){
     }
 }
 
-divisible()
+divisible(Number(prompt("Enter a number: ")),false)
 
 
 //telecom service provider in 3 diff language
@@ -124,10 +115,7 @@ language()
 
 
 // simple calculator
-function calculator(){
-    let addition = Number(prompt("Enter the first number: "));
-    let operator = prompt("Enter an operator (+, *, /, -): ");
-    let addition_2 = Number(prompt("Enter the second number: "));
+function calculator(addition,operator,addition_2){
     
     if (operator === "+") {
         console.log(addition + addition_2);
@@ -149,10 +137,9 @@ function calculator(){
     }
 }
 
+calculator(Number(prompt("Enter the first number: ")),prompt("Enter an operator (+, *, /, -): "),Number(prompt("Enter the second number: ")))
 
-function user(){
-    let user=Number(prompt("enter a number"));
-
+function user(user){
     if (user%2==0){
         console.log("welcome!");
     }else{
@@ -160,7 +147,7 @@ function user(){
     }
 }
 
-user()
+user(Number(prompt("enter a number")))
 
 function student(){
     let student=prompt("enter your marks to get your grade!");
@@ -208,15 +195,15 @@ function find_large(){
 
 find_large()
 
-function arr(){
-    arr=[12,45,53,78,97]
-
-for (let con = 0; con < 10; con++) {
-    console.log(con, "is a number");
+function printNumbers(arr, limit) {
+    for (let i = 0; i < limit; i++) {
+        console.log(i, "is a number");
+        console.log("arr:",arr);
+    }
 }
-}
 
-arr()
+let numbers = [12, 45, 53, 78, 97];
+printNumbers(numbers, 10);
 
 
 // printing 1 to 10
