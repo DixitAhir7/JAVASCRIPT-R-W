@@ -8,51 +8,52 @@ test(3)
 //in post increment or decrease you'll have to print it 
 //in pre you won't have to print it
 
-// console.log(x--);
-// console.log(x);
-// console.log(--x);
-// console.log("2"==2);
-// console.log(2=="4");
-
 //swapping two variables
 function swap(a,b){
     [a,b] = [b,a];
-    console.log(a);
-    console.log(b);
+    return [b,a]
 }
 
-swap(10,20)
+let a = 10
+let b = 20
+ 
+a,b = swap(a, b)
+
+console.log(a)
+console.log(b)
 
 // finding min number
 function min_number(num,num_2){
     
     if (num,num_2==0){
-        console.log("please enter a number");
+        return "please enter a number"
     }else if (num>num_2){
-        console.log("minimum number:",num_2);
+        return "minimum number:",num_2
     }else if (num<num_2){
-        console.log("minimum number:",num);
+        return "minimum number:",num
     }else{
-        console.log("goodbye");
+        return "goodbye"
     }
 }
 
-min_number(prompt("enter first number:",prompt("enter second number:")))
+result=min_number(prompt("enter first number:"),prompt("enter second number:"))
+console.log(result);
 
 
 //neutral number
 function neutral_number(zero){
 
-    if (zero==0){
-        console.log("it is zero");
-    }else if(zero>0){
-        console.log("it's postive");
-    }else if (zero<0){
-        console.log("it's negative");
+    if (zero == 0){
+        return "it is zero"
+    }else if(zero > 0){
+        return "it's positive"
+    }else if (zero < 0){
+        return "it's negative"
     }
 }
 
-neutral_number(Number(prompt("enter a number:")))
+result_neutral=neutral_number(Number(prompt("enter a number:")))
+console.log(result_neutral);
 
 //checking the num is divisible by this number or not
 
@@ -165,7 +166,6 @@ function student(){
 student()
 
 // finding large number
-
 
 function find_large(){
     let user_again=Number(prompt("enter a number: "))
