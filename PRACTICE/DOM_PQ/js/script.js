@@ -13,3 +13,10 @@ function decrement() {
     count_decrement--;
     console.log(count_decrement)
 }
+
+let count_reset = 0;
+
+function reset() {
+    document.getElementsByClassName("c3").innerText = count_reset
+    console.log(count_reset.reset)
+}
