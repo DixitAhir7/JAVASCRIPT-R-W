@@ -116,6 +116,7 @@ language()
 
 
 // simple calculator
+
 function calculator(addition,operator,addition_2){
     
     if (operator === "+") {
@@ -245,33 +246,31 @@ even()
 
 // multiplication table
 
-
-function multiplication_table(){
-    first=Number(prompt("enter a number: "));
-
-    for (let i=1; i<11; i++) {
-        console.log(`${first} * ${i} = ${first*i}`)
+function multiplicationTable(mt) {
+    let table = "";
+    for (let i = 1; i <= 10; i++) {
+        table += `${mt} * ${i} = ${mt * i}\n`;
     }
+    return table;
 }
 
-multiplication_table()
+let number = Number(prompt("Enter a number: "));
+console.log(multiplicationTable(number));
 
-function star(){
-    let star=prompt("enter number of star: ");
-    let star_2=""
-    
-    
-    for(let i=1; i<=star; i++){
-        for(let j=1; j<=i; j++){
-            star_2+="*"
+
+function generateStars(rows) {
+    let starPattern = "";
+    for (let i = 1; i <= rows; i++) {
+        for (let j = 1; j <= i; j++) {
+            starPattern += "*";
         }
-        star_2+="\n"
+        starPattern += "\n";
     }
-    
-    console.log(star_2);
+    return starPattern;
 }
 
-multiplication_table()
+let starnumber = Number(prompt("Enter number of stars: "));
+console.log(generateStars(starnumber));
 
 
 // fibonocci series
