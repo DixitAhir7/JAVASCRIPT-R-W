@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1320px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <form action="javascript:void(0)" onsubmit="formSubmit()">
+                <div class="form-validation">
+                    <label for="username">userName</label>
+                    <input type="text" id="userName">
+                </div>
+
+                <div class="for-password">
+                    <label for="password">password</label>
+                    <input type="password" id="password">
+                </div>
+
+                <div class="for-submit">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+            <div class="output">
+                <p>userName: <span></span></p>
+                <p>password: <span></span></p>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
