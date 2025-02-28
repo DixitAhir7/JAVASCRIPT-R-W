@@ -9,7 +9,7 @@ const arr = [
 
 // shift will remove the first index element
 
-console.log(arr)
+// console.log(arr)
 
 // let removingShift = arr.shift()
 // console.log(removingShift)
@@ -36,6 +36,23 @@ console.log(arr)
 // it'll return 1,2 index
 // it'll add elements at specified index
 
-const tosliceElement = arr.splice(1, 2, 'a', 'b')
-console.log(tosliceElement)
-console.log(arr)
+// const tosliceElement = arr.splice(1, 2, 'a', 'b')
+// console.log(tosliceElement)
+// console.log(arr)
+
+const arr2 = [10, 20, 30, 40, 50]
+
+// it is not in place
+// original remains unchanged
+
+const reomveWSplice = arr2.toSpliced(1, 2)
+
+// replacing elements at index 1,2 
+const reomveWSplice2 = arr2.toSpliced(1, 2, 200, 300)
+
+const removeArr = arr2.toSpliced(arr2.length)
+
+console.log(arr2)
+console.log("removed elements:\n", reomveWSplice)
+console.log("added elements:\n", reomveWSplice2)
+console.log("removed elements:\n", removeArr)
