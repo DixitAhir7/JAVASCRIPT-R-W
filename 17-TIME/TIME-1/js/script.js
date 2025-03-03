@@ -32,3 +32,7 @@ let timeout = setInterval(function () {
     }
     count++;
 }, 2000);
+
+
+let hours = new Date()
+console.log(hours.getDate)
