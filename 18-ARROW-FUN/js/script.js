@@ -2,4 +2,12 @@
 const add = a => a;
 console.log(add(5));
 
-const Name = n => console.log(Name("dixit", n));
+const Name = n => n
+const af = a => a
+
+function afun(A) {
+    return A
+}
+
+console.log(af(10))
+console.log(Name("dixit ahir"))
