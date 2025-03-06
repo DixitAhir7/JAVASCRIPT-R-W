@@ -32,40 +32,44 @@ const rating = [
 
 ]
 
-
-// const getoriginal = document.querySelector("select");
-// const getoriginal2 = document.querySelector(".sortinglist");
-
-// // display in html
-// rating.forEach(element2 => {
-
-//     getoriginal2.innerHTML +=
-//         `<ul>
-//         <li>${element2.ir}</li>
-//         <li>${element2.movie}</li>
-//         <li><img src="${element2.img}" alt=""></li>
-//     </ul>
-//     `
-// });
-
-
-const getSelect = document.querySelector("select");
-const getSelect2 = document.querySelector(".sort");
-const submit = document.querySelector("submit");
-
-// sorting
-sortedRating = rating.toSorted((a, b) => {
-    return b.ir - a.ir
-})
+// 
+const select = document.querySelector("select");
+const movieDiv = document.querySelector(".sortinglist");
+let search = document.querySelector("input[type='search']")
+let form = document.querySelector("form")
 
 // display in html
-sortedRating.forEach(element => {
-
-    getSelect2.innerHTML +=
-        `<ul>
+function renderData(movies) {
+    movieDiv.innerHTML = ""
+    movies.forEach(element => {
+        movieDiv.innerHTML +=
+            `<ul>
         <li>${element.ir}</li>
         <li>${element.movie}</li>
         <li><img src="${element.img}" alt=""></li>
     </ul>
     `
-});
+    });
+}
+
+renderData(rating)
+
+
+form.onsubmit = (e) => {
+
+    e.preventDefault()
+
+    if (select.value == "1") {
+        renderData(rating)
+        return
+    }
+
+    if (select.value == "2") {
+        let sortRating = rating.toSorted((a, b) => {
+            return b.ir - a.ir
+        })
+        console.log(sortRating);
+        renderData(sortRating)
+        return
+    }
+}
