@@ -1,137 +1,171 @@
-let count = [11, 5, 56, 235, 57, 68, 357]
+// let count = [11, 5, 56, 235, 57, 68, 357]
 
-const temp = (a, b) => { return a.grid - b.grid }
-
-
-let users = [
-    {
-        id: 1,
-        name: "aakash",
-        grid: 9220
-    },
-    {
-        id: 2,
-        name: "pratham",
-        grid: 9544
-    },
-    {
-        id: 3,
-        name: "dixit",
-        grid: 9515
-    },
-    {
-        id: 4,
-        name: "zeel",
-        grid: 8781
-    },
-    {
-        id: 5,
-        name: "priyanka",
-        grid: 7999
-    },
-    {
-        id: 6,
-        name: "aayush",
-        grid: 7733
-    },
-    {
-        id: 7,
-        name: "bhavesh",
-        grid: 9230
-    },
-    {
-        id: 8,
-        name: "vrushita",
-        grid: 9288
-    },
-    {
-        id: 9,
-        name: "het",
-        grid: 9114
-    },
-    {
-        id: 10,
-        name: "poojan",
-        grid: 7966
-    },
-    {
-        id: 11,
-        name: "bhavesh",
-        grid: 9229
-    },
-]
-
-const usersDiv = document.getElementById(".sort")
-users.forEach((user) => {
-    usersDiv.innerHTML += `
-        <div class="col-3">
-            <ul class="user">
-                <li>ID : ${user.id}</li>
-                <li>name : ${user.name}</li>
-                <li>grid : ${user.grid}</li>
-            </ul>
-        </div>
-    `
-})
+// const temp = (a, b) => { return a.grid - b.grid }
 
 
-const selcet = document.querySelector("form select")
-const form = document.querySelector("form")
+// let users = [
+//     {
+//         id: 1,
+//         name: "aakash",
+//         grid: 9220
+//     },
+//     {
+//         id: 2,
+//         name: "pratham",
+//         grid: 9544
+//     },
+//     {
+//         id: 3,
+//         name: "dixit",
+//         grid: 9515
+//     },
+//     {
+//         id: 4,
+//         name: "zeel",
+//         grid: 8781
+//     },
+//     {
+//         id: 5,
+//         name: "priyanka",
+//         grid: 7999
+//     },
+//     {
+//         id: 6,
+//         name: "aayush",
+//         grid: 7733
+//     },
+//     {
+//         id: 7,
+//         name: "bhavesh",
+//         grid: 9230
+//     },
+//     {
+//         id: 8,
+//         name: "vrushita",
+//         grid: 9288
+//     },
+//     {
+//         id: 9,
+//         name: "het",
+//         grid: 9114
+//     },
+//     {
+//         id: 10,
+//         name: "poojan",
+//         grid: 7966
+//     },
+//     {
+//         id: 11,
+//         name: "bhavesh",
+//         grid: 9229
+//     },
+// ]
 
-form.onsubmit = (e) => {
-    e.preventDefault()
+// const usersDiv = document.getElementById(".sort")
+// users.forEach((user) => {
+//     usersDiv.innerHTML += `
+//         <div class="col-3">
+//             <ul class="user">
+//                 <li>ID : ${user.id}</li>
+//                 <li>name : ${user.name}</li>
+//                 <li>grid : ${user.grid}</li>
+//             </ul>
+//         </div>
+//     `
+// })
 
-    if (selcet.value == 0) {
-        usersDiv.innerHTML = ""
-        users.forEach((user) => {
-            usersDiv.innerHTML += `
-        <div class="col-3">
-            <ul class="user">
-                <li>ID : ${user.id}</li>
-                <li>name : ${user.name}</li>
-                <li>grid : ${user.grid}</li>
-            </ul>
-        </div>
-    `
-        })
+
+// const selcet = document.querySelector("form select")
+// const form = document.querySelector("form")
+
+// form.onsubmit = (e) => {
+//     e.preventDefault()
+
+//     if (selcet.value == 0) {
+//         usersDiv.innerHTML = ""
+//         users.forEach((user) => {
+//             usersDiv.innerHTML += `
+//         <div class="col-3">
+//             <ul class="user">
+//                 <li>ID : ${user.id}</li>
+//                 <li>name : ${user.name}</li>
+//                 <li>grid : ${user.grid}</li>
+//             </ul>
+//         </div>
+//     `
+//         })
+//     }
+//     else if (selcet.value == 1) {
+//         const sortedUsers = users.toSorted((a, b) => {
+
+//             // {name : priyanka}  {name: pratham}
+
+//             if (a.name < b.name) return -1;
+//             if (a.name > b.name) return 1;
+//             if (a.name === b.name) {
+//                 return a.grid - b.grid
+//             }
+//             return 0
+//         })
+//         usersDiv.innerHTML = ""
+//         sortedUsers.forEach((user) => {
+//             usersDiv.innerHTML += `
+//         <div class="col-3">
+//             <ul class="user">
+//                 <li>ID : ${user.id}</li>
+//                 <li>name : ${user.name}</li>
+//                 <li>grid : ${user.grid}</li>
+//             </ul>
+//         </div>
+//     `
+//         })
+//     } else if (selcet.value == 2) {
+//         const sortedUsers = users.toSorted((a, b) => { return a.grid - b.grid })
+//         usersDiv.innerHTML = ""
+//         sortedUsers.forEach((user) => {
+//             usersDiv.innerHTML += `
+//         <div class="col-3">
+//             <ul class="user">
+//                 <li>ID : ${user.id}</li>
+//                 <li>name : ${user.name}</li>
+//                 <li>grid : ${user.grid}</li>
+//             </ul>
+//         </div>
+//     `
+//         })
+//     }
+// }
+
+
+const users2 = [
+    { id: 1, name: "aakash", grid: 9220 },
+    { id: 2, name: "pratham", grid: 9544 },
+    { id: 3, name: "dixit", grid: 9515 },
+    { id: 4, name: "zeel", grid: 8781 },
+    { id: 5, name: "priyanka", grid: 7999 },
+    { id: 6, name: "aayush", grid: 7733 },
+    { id: 7, name: "bhavesh", grid: 9230 },
+    { id: 8, name: "vrushita", grid: 9288 },
+    { id: 9, name: "het", grid: 9114 },
+    { id: 10, name: "poojan", grid: 7966 },
+    { id: 11, name: "bhavesh", grid: 9229 },
+];
+
+// Sorting function using reduce
+const sortedUsers = users2.reduce((acc, user) => {
+    let index = acc.findIndex(item =>
+        item.id > user.id ||
+        (item.id === user.id && item.grid > user.grid) ||
+        (item.id === user.id && item.grid === user.grid && item.name > user.name)
+    );
+
+    if (index === -1) {
+        acc.push(user); // If no larger item is found, push at the end
+    } else {
+        acc.splice(index, 0, user); // Insert at the found position
     }
-    else if (selcet.value == 1) {
-        const sortedUsers = users.toSorted((a, b) => {
 
-            // {name : priyanka}  {name: pratham}
+    return acc;
+}, []);
 
-            if (a.name < b.name) return -1;
-            if (a.name > b.name) return 1;
-            if (a.name === b.name) {
-                return a.grid - b.grid
-            }
-            return 0
-        })
-        usersDiv.innerHTML = ""
-        sortedUsers.forEach((user) => {
-            usersDiv.innerHTML += `
-        <div class="col-3">
-            <ul class="user">
-                <li>ID : ${user.id}</li>
-                <li>name : ${user.name}</li>
-                <li>grid : ${user.grid}</li>
-            </ul>
-        </div>
-    `
-        })
-    } else if (selcet.value == 2) {
-        const sortedUsers = users.toSorted((a, b) => { return a.grid - b.grid })
-        usersDiv.innerHTML = ""
-        sortedUsers.forEach((user) => {
-            usersDiv.innerHTML += `
-        <div class="col-3">
-            <ul class="user">
-                <li>ID : ${user.id}</li>
-                <li>name : ${user.name}</li>
-                <li>grid : ${user.grid}</li>
-            </ul>
-        </div>
-    `
-        })
-    }
-}
+console.log(sortedUsers);
