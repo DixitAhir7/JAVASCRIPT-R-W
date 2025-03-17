@@ -1,21 +1,21 @@
-let str="15.37";
-let str_num=parseInt(str);
+let str = "15.37";
+let str_num = parseInt(str);
 console.log(str_num);
 
-let str_number=Number(str);
+let str_number = Number(str);
 console.log(str_number);
 
-let str_float=parseFloat(str);
+let str_float = parseFloat(str);
 console.log(str_float);
 
-let str_bool=Boolean(str);
+let str_bool = Boolean(str);
 console.log(str_bool);
 
-let str_zero="0";
-let str_con_zero=Boolean(str_zero);
+let str_zero = "0";
+let str_con_zero = Boolean(str_zero);
 console.log(str_con_zero);
 
-let Name="Dixit";
-let Name_two="P";
-let Name_three="Ahir";
+let Name = "Dixit";
+let Name_two = "P";
+let Name_three = "Ahir";
 console.log(`${Name} ${Name_two}. ${Name_three}`);

@@ -1,8 +1,8 @@
-// function changing_name() {
-//     let a = document.getElementsByClassName("h1").innerHTMl = "hy"
-//     document.write(a)
-//     document.body.style.backgroundColor = "black"
-// }
+function changing_name() {
+    let a = document.getElementsByClassName("h1").innerHTMl = "hy"
+    document.body.style.backgroundColor = "black"
+    return a
+}
 
 
 let reversename = true;
