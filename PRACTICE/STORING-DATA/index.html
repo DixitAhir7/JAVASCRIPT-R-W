@@ -6,72 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="js/script.js"></script>
-    <style>
-        .container {
-            max-width: 1320px;
-            margin: 0 auto;
-        }
-
-        .form input:last-child {
-            margin-left: 10px;
-        }
-
-        .d-flex {
-            display: flex;
-        }
-
-        label,
-        input {
-            display: block;
-        }
-    </style>
 </head>
+<style>
+    .container {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+</style>
 
 <body>
-
     <section>
         <div class="container">
-            <form action="">
-                <div class="name">
-                    <label for="pr-name">Product Name: </label>
-                    <input type="text" id="pr-name" autocomplete="off">
+            <form>
+                <div>
+                    <label for="">enter name:</label>
+                    <input type="text" id="pName">
+                </div>
+                <div>
+                    <input type="file" name="" id="img" multiple>
+                </div>
+                <div>
+                    <label for="pPrice">price:</label>
+                    <input type="number" name="" id="pPrice">
+                </div>
+                <div>
+                    <label for="Pdec">description</label>
+                    <textarea name="" id="Pdec"></textarea>
                 </div>
 
-                <div class="show-img">
-                    <label for="pImg">insert Image</label>
-                    <input type="file" name="" id="pImg">
-                </div>
-
-                <div class="price">
-                    <label for="pr-price">Product Price: </label>
-                    <input type="number" id="pr-price">
-                </div>
-
-                <div class="description">
-                    <label for="pr-dec">about-product</label>
-                    <textarea id="pr-dec"></textarea>
-                </div>
-
-                <div class="form d-flex">
-                    <input id="i1" type="submit" value="submit">
+                <div>
+                    <input type="submit" value="submit">
+                    <input class="updatebtn" type="button" value="update">
                     <input type="reset" value="reset">
                 </div>
-
             </form>
         </div>
     </section>
 
-    <section class="show-pr">
-        <div class="container">
-            <div id="pr-list"></div>
+    <section>
+        <div class="show-pr">
+            <div id="pr-list" class="d-flex">
+
+            </div>
         </div>
+
         <div class="show-img">
 
         </div>
     </section>
-
-
-
+    <div>
+        <a href=""></a>
+        <a href=""></a>
+    </div>
+   
 
 </body>
 

@@ -1,65 +1,118 @@
-const form = document.querySelector("section form");
-const prName = form.querySelector("div:first-child input");
-const pr_img = form.querySelector("div:nth-child(2) input");
-const prPrice = form.querySelector("div:nth-child(3) input");
-const prDec = form.querySelector("div:nth-child(4) textarea");
-const showPr = document.querySelector(".show-pr #pr-list");
+// getting all the nessecary html 
 
-// Display image
-const prImg = form.querySelector(".show-pr .show-img");
+const form = document.querySelector('section form');
+const prname = form.querySelector('div:nth-child(1) input#pName');
+const prImg = form.querySelector('div:nth-child(2) input#img')
+const prprice = form.querySelector('div:nth-child(3) input#pPrice');
+const prdescription = form.querySelector('div:nth-child(4) textarea#Pdec');
+const prSubmit = form.querySelector('[type="submit"]');
+const prUpdate = form.querySelector('[type="button"]');
+const prList = document.querySelector('.show-pr #pr-list')
 
-const ITEM = "products";
-const products = JSON.parse(localStorage.getItem(ITEM)) || [];
+// console.log(prname);
+// console.log(prprice);
+// console.log(prUpdate);
 
-function displayHtml(product) {
-    showPr.innerHTML = "";
-    showPr.innerHTML = `
-        <div id="product">
-            <h3>${product.name}</h3>
-            <p>${product.price}</p>
-            <div class="product-img">
-                <img src="${product.img}">
-            </div>
-            <p>${product.dec}</p>
-        </div>
-    `;
+
+// storing data in local storage
+const ITEMKEY = 'product'
+const data = JSON.parse(localStorage.getItem(ITEMKEY)) || [];
+
+
+// showing in display
+function displayHtml(data) {
+    prList.innerHTML = "";
+
+
+    // this will take data from localstroage
+    data.forEach((product, index) => {
+        prList.innerHTML += `
+                        <div class="product"> 
+                            <div class="producst-img">
+                                <img src="${product.img}">
+                            </div>
+                            <h3>${product.name}</h3>
+                            <p>${product.price}</p>
+                            <p>${product.description}</p>
+                            <a class="product-delete" href="javascript:void()" onclick="deleteData(${index})">delete</a>
+                            <a class="product-update" href="javascript:void()" onclick="update(${index})">update</a>
+                        </div>
+            `;
+    });
 }
 
-form.addEventListener("submit", (e) => {
+// when submit data will display
+form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const inputImg = pr_img.files[0];
-
-    if (!inputImg) {
-        alert("Please select an image");
-        return;
-    }
+    let inputName = prname.value;
+    let inputPrice = prprice.value;
+    let inputdec = prdescription.value;
+    let inputImg = prImg.files[0]
 
     const product = {
-        name: prName.value,
-        price: Number(prPrice.value),
-        dec: prDec.value
-    };
+        name: inputName,
+        price: Number(inputPrice),
+        description: inputdec,
+    }
 
-    const file = new FileReader();
-    file.readAsDataURL(inputImg);
 
-    file.onload = () => {
-        product["img"] = file.result;
+    // filereader is api for images and files
 
-        products.push(product);
-        localStorage.setItem(ITEM, JSON.stringify(products));
+    const reader = new FileReader();
+    reader.readAsDataURL(inputImg);
 
-        displayHtml(product);
-    };
+    // without onload event it won't work
 
-    prName.value = "";
-    prPrice.value = "";
-    prDec.value = "";
-    pr_img.value = "";
-});
+    reader.onload = () => {
+        product['img'] = reader.result
 
-const lastProducts = JSON.parse(localStorage.getItem(ITEM));
-if (lastProducts && lastProducts.length > 0) {
-    displayHtml(lastProducts[lastProducts.length - 1]);
+        // adding the image to object and then storing it again in localstorage
+        data.push(product);
+        localStorage.setItem(ITEMKEY, JSON.stringify(data));
+
+        displayHtml(data);
+    }
+
+    prname.value = ""
+    prprice.value = ""
+    prdescription.value = ""
+
+})
+
+
+
+prUpdate.onclick = (e) => {
+    e.preventDefault()
+
+    let inputName = prname.value;
+    let inputPrice = prprice.value;
+    let inputdec = prdescription.value;
+    let inputImg = prImg.files[0]
 }
+
+function update(userindex) {
+    const products = JSON.parse(localStorage.getItem(ITEMKEY)) || []
+    const product = products.find((product, index) => {
+        return index === userindex
+    })
+
+    prname.value = product.name
+    prprice.value = product.price
+    prdescription.value = product.description
+    prImg.value = product.img
+    setbase64(product.img, prImg)
+    console.log(prUpdate);
+    console.log(prSubmit);
+    prUpdate.style.display = "block"
+    prSubmit.style.display = "none"
+}
+
+function deleteData(index) {
+    const products = JSON.parse(localStorage.getItem(ITEMKEY))
+    products.splice(index, 1)
+    localStorage.setItem(ITEMKEY, JSON.stringify(products))
+    displayHtml(products)
+}
+
+displayHtml(data)
