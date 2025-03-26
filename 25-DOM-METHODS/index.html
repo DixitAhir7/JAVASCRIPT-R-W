@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="js/script.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <section>
+
+        <span>
+            span tag
+        </span>
+    </section>
+
+    <script>
+        const paragraph = document.createElement("p");
+
+        // this will add text in p
+        const textNode = document.createTextNode("Hello, this is a text node!");
+        paragraph.appendChild(textNode);
+        document.body.appendChild(paragraph);
+    </script>
+</body>
+
+</html>

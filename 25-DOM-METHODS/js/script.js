@@ -19,8 +19,9 @@ body.appendChild(aside)
 body.replaceChild(div2, aside)
 
 
-
-const aTag = document.createElement('a');
-aTag.appendChild(section)
-
-body.replaceChild(aTag,)
+/*
+clonenode will give you copy of element,
+when you pass true:then content too
+*/
+const copy = section.cloneNode(true)
+console.log(copy);
