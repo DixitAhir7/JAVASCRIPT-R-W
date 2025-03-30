@@ -91,7 +91,6 @@ form.onsubmit = (e) => {
     // duplicate array
     let usersFilter = [...users];
 
-    // if search value exist then this fun will run
     if (searchValue) {
 
         usersFilter = users.filter(
