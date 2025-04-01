@@ -1,5 +1,15 @@
-// * it imports all export functions from module
+/*
+* it imports all export functions from module
+ you can import as defined function name too
+*/
 
-import * as fun from './function.js';
+// * it is called alias
 
-fun.addDetail()     
+// import * as fun from './function.js';
+import { addDetail } from './function.js';
+import * as user from '../import-m/import.js';
+
+// fun.addDetail()  
+addDetail()
+
+user.addUser()
