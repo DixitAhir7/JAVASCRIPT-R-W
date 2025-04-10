@@ -32,7 +32,6 @@ class Teacher extends User {
     };
 };
 
-
 const s1 = new Student('dixit', 21, 8866555078, 'javascript');
 s1.getId();
 console.log(s1);
