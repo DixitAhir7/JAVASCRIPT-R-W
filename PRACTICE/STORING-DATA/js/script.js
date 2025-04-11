@@ -9,11 +9,6 @@ const prSubmit = form.querySelector('[type="submit"]');
 const prUpdate = form.querySelector('[type="button"]');
 const prList = document.querySelector('.show-pr #pr-list')
 
-// console.log(prname);
-// console.log(prprice);
-// console.log(prUpdate);
-
-
 // storing data in local storage
 const ITEMKEY = 'product'
 const data = JSON.parse(localStorage.getItem(ITEMKEY)) || [];
@@ -22,7 +17,6 @@ const data = JSON.parse(localStorage.getItem(ITEMKEY)) || [];
 // showing in display
 function displayHtml(data) {
     prList.innerHTML = "";
-
 
     // this will take data from localstroage
     data.forEach((product, index) => {
@@ -39,7 +33,7 @@ function displayHtml(data) {
                         </div>
             `;
     });
-}
+};
 
 // when submit data will display
 form.addEventListener('submit', (e) => {
