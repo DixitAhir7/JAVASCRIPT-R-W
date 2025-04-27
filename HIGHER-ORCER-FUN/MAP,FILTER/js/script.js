@@ -6,7 +6,6 @@ const arrSort = arr.filter((fill) => {
     if (fill == 98 || fill == 3) {
         return true
     }
-
     return false
 })
 

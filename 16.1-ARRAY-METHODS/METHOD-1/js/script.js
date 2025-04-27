@@ -33,4 +33,3 @@ console.log(obj[0].Id)
 console.log(obj[0].Name)
 console.log(obj[0].Home)
 console.log(obj[0].Email)
-
