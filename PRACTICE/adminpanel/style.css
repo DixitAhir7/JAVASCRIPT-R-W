@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+aside {
+    height: 800px;
+    width: 200px;
+    background-color: rgba(128, 128, 128, 0.489);
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+main {
+    height: calc(100vh - 80px);
+    background-color: cyan;
+    margin-left: 205px;
+    overflow: scroll;
+    position: relative;
+}
+
+.active {
+    margin-left: 0;
+}
+
+aside.active+main {
+    margin-left: 300px;
+}
