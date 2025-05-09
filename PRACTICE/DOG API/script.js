@@ -1,20 +1,16 @@
 async function fetchDogs() {
     const response = await fetch('https://dog.ceo/api/breeds/image/random', {
-        method: 'GET',
-        headers: {
-            'Accept': 'application/json',
-        },
-        credentials: 'omit'
+        method: 'GET'
     });
 
-    const text = await response.text();
+    const text = await response.json();
     if (!response.ok) {
         console.log(response.status);
     }
 
     try {
         const getdog = document.querySelector('button');
-        let data = JSON.parse(text);
+        let data = text
         if (data) {
             getdog.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -26,8 +22,6 @@ async function fetchDogs() {
                 document.body.appendChild(imgtag);
             })
         }
-    } catch (error) {
-        console.error('Error parsing JSON:', error);
-    }
+    } catch (error) { console.error('Error loading api:', error); }
 }
 fetchDogs();

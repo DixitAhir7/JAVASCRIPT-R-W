@@ -64,14 +64,12 @@ form.addEventListener('submit', (e) => {
         // adding the image to object and then storing it again in localstorage
         data.push(product);
         localStorage.setItem(ITEMKEY, JSON.stringify(data));
-
         displayHtml(data);
     }
 
     prname.value = ""
     prprice.value = ""
     prdescription.value = ""
-
 })
 
 
