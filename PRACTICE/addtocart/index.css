@@ -3,22 +3,41 @@ a {
     color: black;
 }
 
+ul,
+ol {
+    list-style: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.m-auto {
+    margin-left: auto;
+}
+
+nav ul li,
+i {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
 .display-data p {
     font-size: 16px;
 }
 
-.display-data img {
-    width: 200px;
-    height: 200px;
-}
-
 .display-data {
-    background-color: gray;
     max-width: 200px;
-    height: 40vh;
+    padding: 8px;
+    border-radius: 8px;
 }
 
 .container {
     max-width: 1320px;
     margin: 0 auto;
+}
+
+.image-preview img {
+    width: 100px;
+    height: 100px;
 }

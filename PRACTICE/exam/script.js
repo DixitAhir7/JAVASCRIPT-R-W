@@ -1,20 +1,16 @@
-const displaydata = document.querySelector('.display-data');
+const displaydata = document.querySelector('.showdata .row');
 const getdata = JSON.parse(localStorage.getItem('products')) || [];
-const displayimg = document.querySelector('.image-preview');
-const carticon = document.querySelector('.cart i');
 
 function displayproducts(getdata) {
-    displaydata.style.display = 'block';
-    getdata.forEach((product) => {
+    getdata.forEach((product, index) => {
         displaydata.innerHTML += `
         <div id="displayproducts">
             <h2>${product.namevalue}</h2>
             <p>${product.pricevalue}</p>
             <p>${product.selectvalue}</p>
+            <img src="${product.imgresult}"> 
         </div>
     `
-        displayimg.innerHTML +=
-            `<img src="${product.imgresult}">`
     });
 };
 

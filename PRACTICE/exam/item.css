@@ -1,0 +1,63 @@
+.d-block {
+    display: block;
+}
+
+.image-preview img {
+    width: 100px;
+    height: 100px;
+}
+
+/* form css */
+form {
+    background-color: rgb(248, 249, 250);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 50px auto;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: rgb(0, 123, 255);
+}
+
+input[type="file"] {
+    padding-top: 10px;
+}
+
+input[type="submit"] {
+    background-color: rgba(0, 0, 255, 0.351);
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(0, 0, 255, 0.81);
+}
+
+select {
+    margin-top: 10px;
+    background-size: 16px;
+    padding: 15px;
+}

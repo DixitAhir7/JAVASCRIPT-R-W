@@ -1,0 +1,59 @@
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-4{
+    width: 40%;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.m-auto {
+    margin-left: auto;
+}
+
+nav ul li,
+i {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+/* display-data css */
+
+.showdata {
+    width: 300px;
+    border-radius: 10px;
+    padding: 18px;
+    background-color: gray;
+}
+
+.showdata img {
+    width: 290px;
+    height: 150px;
+}
+
+.showdata h2,
+.showdata p {
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: wheat;
+}

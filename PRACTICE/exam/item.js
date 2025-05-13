@@ -4,26 +4,24 @@ const image = document.querySelector('input[type="file"]');
 const form = document.querySelector('form');
 const select = form.querySelector('select');
 const imagepreview = document.querySelector('.image-preview');
-const cart = document.querySelector('.cart span');
 
-const catogory = ['select', 'electronic', 'clothes', 'shoes'];
+const catogory = ['select', 'electronic', 'games', 'shoes', 'clothes', 'construction'];
 
-catogory.forEach((index, value) => {
+catogory.forEach((name, index) => {
     select.innerHTML +=
-        `<option value="${index}">${value}</option>`
+        `<option value="${name}" id="${index}">${name}</option>`
 });
 
 const reader = new FileReader();
 
 image.onchange = () => {
     reader.readAsDataURL(image.files[0]);
+    reader.onload = () => {
+        imagepreview.innerHTML +=
+            `<img src="${String(reader.result)}" alt="${image.src}">`
+    }
 }
 
-reader.onload = () => {
-    imagepreview.innerHTML +=
-        `<img src="${reader.result}" alt="NO IMG">`
-
-}
 
 function addingitems() {
     form.addEventListener('submit', (e) => {
@@ -34,7 +32,7 @@ function addingitems() {
         const obj = {
             namevalue: prname.value,
             pricevalue: prprice.value,
-            selectvalue: select.value,
+            selectvalue: select,
             imgresult: reader.result
         }
         getdata.push(obj);
