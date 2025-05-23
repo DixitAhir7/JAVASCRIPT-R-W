@@ -27,10 +27,6 @@ main {
     position: relative;
 }
 
-.active {
-    margin-left: 0;
-}
-
 aside.active+main {
     margin-left: 300px;
 }
