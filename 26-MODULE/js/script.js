@@ -1,5 +1,5 @@
 /*
-* it imports all export functions from module
+* it imports all exported functions from module
  you can import as defined function name too
 */
 
