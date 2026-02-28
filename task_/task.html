@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice UI</title>
+    <script src="taskInvoice.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .wrapper {
+            width: 1000px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            display: flex;
+            gap: 30px;
+        }
+
+        .invoice {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .invoice h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .form-row input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .small-input {
+            max-width: 120px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table th {
+            background: #2e7d32;
+            color: #fff;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .action-btn {
+            padding: 4px 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .add-btn {
+            background: #2e7d32;
+            color: #fff;
+        }
+
+        .delete-btn {
+            background: #d32f2f;
+            color: #fff;
+        }
+
+        .summary {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        .summary div {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            background: #f1f1f1;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .print-btn {
+            margin-top: 15px;
+            background: #1976d2;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media(max-width:900px) {
+            .wrapper {
+                flex-direction: column;
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="invoice">
+            <h2>INVOICE</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Particular</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" placeholder="Item 1"></td>
+                        <td><input type="number" value="0"></td>
+                        <td><input type="number" value="0"></td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <span id="errorItem"></span>
+            <button type="button" class="print-btn">Print</button>
+            <span id="Amount">Amount: 0</span>
+        </div>
+
+        <div class="invoice">
+            <h2>INVOICE</h2>
+            <p><strong>Inv No:</strong> 1001</p>
+            <p><strong>Date:</strong> 16-12-2022</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="item">Item</td>
+                        <td id="Qty">15</td>
+                        <td id="Rate">15</td>
+                        <td>225</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
