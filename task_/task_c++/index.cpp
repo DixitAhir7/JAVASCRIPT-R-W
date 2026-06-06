@@ -2,11 +2,18 @@
 using namespace std;
 
 int main() {
-     cout << "Pattern 1:\n";
+    cout << "Pattern 1:\n";
     pattern1();
+    int num;
 
     cout << "\nPattern 2:\n";
     pattern2();
+
+    alphabetSkipper()
+    printf("Enter any number: ");
+    scanf("%d", &num);
+
+    printf("Total number of digits: %d", countDigits(num));
 
     return 0;
 }
@@ -51,4 +58,24 @@ void pattern2() {
 
         cout << endl;
     }
+}
+
+void alphabetSkipper() {
+    char ch = 'a';
+
+    do {
+        printf("%c ", ch);
+        ch += 4;
+    } while (ch <= 'z');
+}
+
+int countDigits(int num) {
+    int count = 0;
+
+    do {
+        count++;
+        num = num / 10;
+    } while (num != 0);
+
+    return count;
 }
