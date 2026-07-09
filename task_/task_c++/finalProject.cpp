@@ -16,12 +16,11 @@ int main()
 
     do
     {
-        cout << "\n===== MAIN MENU =====\n";
-        cout << "1. Linked List\n";
+        cout << "1. linked list\n";
         cout << "2. Sorting\n";
-        cout << "3. Binary Search\n";
-        cout << "4. Exit\n";
-        cout << "Choice: ";
+        cout << "3. binary search\n";
+        cout << "4. exit\n";
+        cout << "choice: ";
         cin >> choice;
 
         switch (choice)
@@ -32,34 +31,33 @@ int main()
             int ch;
             do
             {
-                cout << "\n--- Linked List Menu ---\n";
-                cout << "1. Insert\n";
-                cout << "2. Delete\n";
-                cout << "3. Update\n";
-                cout << "4. Display\n";
-                cout << "5. Back\n";
+                cout << "1. insert\n";
+                cout << "2. delete\n";
+                cout << "3. update\n";
+                cout << "4. display\n";
+                cout << "5. back\n";
                 cin >> ch;
 
                 if (ch == 1)
                 {
                     int x;
-                    cout << "Enter value: ";
+                    cout << "enter value: ";
                     cin >> x;
                     insert(x);
                 }
                 else if (ch == 2)
                 {
                     int x;
-                    cout << "Delete value: ";
+                    cout << "delete value: ";
                     cin >> x;
                     deleteNode(x);
                 }
                 else if (ch == 3)
                 {
                     int oldVal, newVal;
-                    cout << "Old value: ";
+                    cout << "old value: ";
                     cin >> oldVal;
-                    cout << "New value: ";
+                    cout << "new value: ";
                     cin >> newVal;
                     updateNode(oldVal, newVal);
                 }
@@ -75,15 +73,15 @@ int main()
 
         case 2:
         {
-            cout << "Enter number of elements: ";
+            cout << "enter number of elements: ";
             cin >> n;
 
-            cout << "Enter elements:\n";
+            cout << "enter elements:\n";
             for (int i = 0; i < n; i++)
                 cin >> arr[i];
 
             int type;
-            cout << "1. Merge Sort\n2. Quick Sort\n";
+            cout << "1. merge sort\n2. quick sort\n";
             cin >> type;
 
             if (type == 1)
@@ -91,7 +89,7 @@ int main()
             else
                 quickSort(arr, 0, n - 1);
 
-            cout << "Sorted Array:\n";
+            cout << "sorted array:\n";
             for (int i = 0; i < n; i++)
                 cout << arr[i] << " ";
             cout << endl;
@@ -103,30 +101,30 @@ int main()
         {
             if (n == 0)
             {
-                cout << "Please sort an array first.\n";
+                cout << "please sort an array first.\n";
                 break;
             }
 
             int target;
-            cout << "Enter value to search: ";
+            cout << "enter value to search: ";
             cin >> target;
 
             int index = binarySearch(arr, 0, n - 1, target);
 
             if (index != -1)
-                cout << "Found at index " << index << endl;
+                cout << "found at index " << index << endl;
             else
-                cout << "Not found.\n";
+                cout << "not found.\n";
 
             break;
         }
 
         case 4:
-            cout << "Program terminated.\n";
+            cout << "program exited.\n";
             break;
 
         default:
-            cout << "Invalid choice.\n";
+            cout << "invalid choice.\n";
         }
 
     } while (choice != 4);
@@ -157,7 +155,7 @@ void displayList()
 {
     if (head == NULL)
     {
-        cout << "List is empty.\n";
+        cout << "list is empty.\n";
         return;
     }
 
@@ -209,7 +207,7 @@ void updateNode(int oldValue, int newValue)
         temp = temp->next;
     }
 
-    cout << "Value not found.\n";
+    cout << "value not found.\n";
 }
 
 void merge(int arr[], int left, int mid, int right)
