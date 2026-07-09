@@ -150,7 +150,7 @@ int main()
         return 1;
     }
 
-    cout << "Enter " << n << " elements: ";
+    cout << "enter " << n << " elements: ";
 
     for (int i = 0; i < n; i++)
     {
@@ -161,13 +161,13 @@ int main()
 
     do
     {
-        cout << "1. Selection Sort\n";
-        cout << "2. Merge Sort\n";
-        cout << "3. Linear Search\n";
-        cout << "4. Binary Search\n";
-        cout << "5. Display Array\n";
-        cout << "0. Exit\n";
-        cout << "Enter your choice: ";
+        cout << "1. selection sort\n";
+        cout << "2. merge sort\n";
+        cout << "3. linear search\n";
+        cout << "4. binary search\n";
+        cout << "5. display array\n";
+        cout << "0. exit\n";
+        cout << "enter your choice: ";
 
         cin >> choice;
 
@@ -175,13 +175,13 @@ int main()
         {
         case 1:
             selectionSort(arr, n);
-            cout << "Array sorted using Selection Sort.\n";
+            cout << "array sorted using selection sort.\n";
             displayArr(arr, n);
             break;
 
         case 2:
             mergeSort(arr, 0, n - 1);
-            cout << "Array sorted using Merge Sort.\n";
+            cout << "array sorted using merge sort.\n";
             displayArr(arr, n);
             break;
 
@@ -189,7 +189,7 @@ int main()
         {
             int target;
 
-            cout << "Enter element to search: ";
+            cout << "enter element to search: ";
             cin >> target;
 
             int index = linearSearch(arr, n, target);
@@ -211,7 +211,7 @@ int main()
             int target;
             mergeSort(arr, 0, n - 1);
 
-            cout << "Enter element to search: ";
+            cout << "enter element to search: ";
             cin >> target;
 
             int index = binarySearch(arr, n, target);
@@ -233,11 +233,11 @@ int main()
             break;
 
         case 0:
-            cout << "Program exited successfully.\n";
+            cout << "program exited.\n";
             break;
 
         default:
-            cout << "Invalid choice. Please try again.\n";
+            cout << "invalid choice. try again.\n";
         }
 
     } while (choice != 0);
